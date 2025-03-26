@@ -169,11 +169,9 @@ jobs:
         run: |
           cd ./wrt/
 
-          find ./defconfig -type f -iname "*$WRT_CONFIG*" -exec cat {} + | sort | uniq > .config
+          cat $GITHUB_WORKSPACE/Config/$WRT_CONFIG.txt > .config
 
           $GITHUB_WORKSPACE/Scripts/Settings.sh
-
-          cat $GITHUB_WORKSPACE/Config/GENERAL.txt >> .config
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
