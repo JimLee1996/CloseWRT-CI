@@ -85,7 +85,7 @@ jobs:
         run: |
           export WRT_DATE=$(TZ=UTC-8 date +"%y.%m.%d_%H.%M.%S")
           export WRT_MARK=$(echo $GITHUB_REPOSITORY | cut -d '/' -f 1)
-          export WRT_VER=$(echo $WRT_REPO | cut -d '/' -f 4)-$WRT_BRANCH
+          export WRT_VER=$(echo $WRT_REPO | cut -d '/' -f 4)-$(echo $WRT_BRANCH | sed 's|/|-|g')
           export WRT_TARGET=$(grep -m 1 -oP '^CONFIG_TARGET_\K[\w]+(?=\=y)' ./Config/$WRT_CONFIG.txt | tr '[:lower:]' '[:upper:]')
 
           echo "WRT_DATE=$WRT_DATE" >> $GITHUB_ENV
