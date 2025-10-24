@@ -49,7 +49,7 @@ jobs:
       matrix:
         REPO_INFO:
           - {NAME: "MT7981", SOURCE: "JimLee1996/immortalwrt-mt798x-6.6", BRANCH: "zhao-7981r128"}
-          - {NAME: "MT7986", SOURCE: "padavanonly/immortalwrt-mt798x-6.6", BRANCH: "openwrt-24.10-6.6"}
+          - {NAME: "MT7986", SOURCE: "JimLee1996/immortalwrt-mt798x-6.6", BRANCH: "openwrt-24.10-6.6"}
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
