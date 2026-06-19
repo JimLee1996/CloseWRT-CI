@@ -6,9 +6,9 @@ name: CWRT-ALL
 
 #CI计划
 on:
-  #自动编译：每周一早上5点
-  schedule:
-    - cron: 0 21 * * 0
+  # #自动编译：每周一早上5点
+  # schedule:
+  #   - cron: 0 21 * * 0
   #手动编译
   workflow_dispatch:
     inputs:
@@ -38,38 +38,39 @@ jobs:
         with:
           gh_token: ${{secrets.GITHUB_TOKEN}}
           delete_releases: true
-          releases_keep_latest: 0
+          releases_keep_latest: 3
           delete_tags: true
           delete_workflows: true
-          workflows_keep_day: 0
+          workflows_keep_day: 3
 
   config:
     needs: cleanup
-    name: ${{matrix.CONFIG}}
+    name: ${{matrix.REPO_INFO.NAME}}
     strategy:
       fail-fast: false
       #max-parallel: 4
       matrix:
-        CONFIG: [MT7981, MT7986]
         REPO_INFO:
-          - {SOURCE: "Yuzhii0718/immortalwrt-mt798x-6.6-padavanonly", BRANCH: "openwrt-24.10-6.6"}
+          - {NAME: "MT7986", SOURCE: "Yuzhii0718/immortalwrt-mt798x-6.6-padavanonly", BRANCH: "openwrt-24.10-6.6"}
           #- {SOURCE: "chasey-dev/immortalwrt-mt798x-rebase", BRANCH: "25.12"}
+          # - {NAME: "MT7981", SOURCE: "JimLee1996/immortalwrt-mt798x-6.6", BRANCH: "zhao-7981r128"}
+          # - {NAME: "MT7986", SOURCE: "JimLee1996/immortalwrt-mt798x-6.6", BRANCH: "openwrt-24.10-6.6"}
 
     #调用公用编译核心WRT-CORE.yml
     uses: ./.github/workflows/WRT-CORE.yml
     with:
       #编译配置
-      WRT_CONFIG: ${{matrix.CONFIG}}
+      WRT_CONFIG: ${{matrix.REPO_INFO.NAME}}
       #默认主题
-      WRT_THEME: aurora
+      WRT_THEME: bootstrap
       #默认主机名
       WRT_NAME: CWRT
       #默认WIFI名称
       WRT_SSID: CWRT
       #默认WIFI密码
-      WRT_WORD: 12345678
+      WRT_WORD: 12356790
       #默认地址
-      WRT_IP: 192.168.10.1
+      WRT_IP: 192.168.2.1
       #默认密码，仅作提示，修改无用
       WRT_PW: 无
       #源码链接
