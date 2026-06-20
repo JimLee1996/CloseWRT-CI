@@ -1,0 +1,16 @@
+Config/GENERAL.txt
+  h_d72559512a2e1e 3-8,17,21,29,32,37,41,44
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "8a5bedfa94194a06cd447009a63207ed901e4d43",
+  "prompts": {},
+  "humans": {
+    "h_d72559512a2e1e": {
+      "author": "JimLee1996 <59061463@qq.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
