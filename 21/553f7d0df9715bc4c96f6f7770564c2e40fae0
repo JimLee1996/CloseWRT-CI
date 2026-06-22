@@ -1,0 +1,18 @@
+Config/MT7981.txt
+  h_d72559512a2e1e 3-304,306,308-318,320-381,383-477
+.github/workflows/CWRT-ALL.yml
+  h_d72559512a2e1e 55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "21553f7d0df9715bc4c96f6f7770564c2e40fae0",
+  "prompts": {},
+  "humans": {
+    "h_d72559512a2e1e": {
+      "author": "JimLee1996 <59061463@qq.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
