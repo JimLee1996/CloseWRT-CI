@@ -227,6 +227,8 @@ jobs:
               mv -f $FILE ./upload/$NEW_FILE
             done
 
+            ls -lah ./bin/targets/
+
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
 
             make clean -j$(nproc)
