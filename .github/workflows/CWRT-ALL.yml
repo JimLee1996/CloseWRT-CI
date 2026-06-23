@@ -53,7 +53,7 @@ jobs:
         REPO_INFO:
           # - {NAME: "MT7986", SOURCE: "Yuzhii0718/immortalwrt-mt798x-6.6-padavanonly", BRANCH: "openwrt-24.10-6.6"}
           - {NAME: "MT7981", SOURCE: "JimLee1996/immortalwrt-mt798x-rebase", BRANCH: "25.12"}
-          - {NAME: "MT7986", SOURCE: "chasey-dev/immortalwrt-mt798x-rebase", BRANCH: "25.12"}
+          # - {NAME: "MT7986", SOURCE: "chasey-dev/immortalwrt-mt798x-rebase", BRANCH: "25.12"}
           # - {NAME: "MT7981", SOURCE: "JimLee1996/immortalwrt-mt798x-6.6", BRANCH: "zhao-7981r128"}
           # - {NAME: "MT7986", SOURCE: "padavanonly/immortalwrt-mt798x-6.6", BRANCH: "openwrt-24.10-6.6"}
 
