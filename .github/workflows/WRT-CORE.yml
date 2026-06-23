@@ -227,6 +227,9 @@ jobs:
               mv -f $FILE ./upload/$NEW_FILE
             done
 
+            tar zcvf ./targets.tgz ./bin/targets/
+            mv ./targets.tgz ./upload/
+
             find ./bin/targets/ -type f -exec mv -f {} ./upload/ \;
 
             make clean -j$(nproc)
