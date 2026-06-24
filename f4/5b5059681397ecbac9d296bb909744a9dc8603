@@ -1,0 +1,16 @@
+Config/MT7981.txt
+  h_d72559512a2e1e 284
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "f45b5059681397ecbac9d296bb909744a9dc8603",
+  "prompts": {},
+  "humans": {
+    "h_d72559512a2e1e": {
+      "author": "JimLee1996 <59061463@qq.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
