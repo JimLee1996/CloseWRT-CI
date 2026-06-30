@@ -37,6 +37,7 @@ CONFIG_PACKAGE_openssh-sftp-server=y
 
 #DIY
 CONFIG_PACKAGE_luci-app-easytier=y
+CONFIG_PACKAGE_luci-app-n2n=y
 CONFIG_PACKAGE_luci-app-frpc=n
 CONFIG_PACKAGE_luci-app-frps=y
 CONFIG_PACKAGE_luci-app-ddns-go=y
