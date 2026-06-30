@@ -112,8 +112,8 @@ CONFIG_TARGET_MULTI_PROFILE=y
 #CONFIG_TARGET_DEVICE_PACKAGES_mediatek_filogic_DEVICE_livinet_zr-3020-ubootmod=""
 #CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_livinet_zr-3020=y
 #CONFIG_TARGET_DEVICE_PACKAGES_mediatek_filogic_DEVICE_livinet_zr-3020=""
-CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_zhao_7981-r128-dsa-mtkuboot=y
-CONFIG_TARGET_DEVICE_PACKAGES_mediatek_filogic_DEVICE_zhao_7981-r128-dsa-mtkuboot=""
+CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_zhao_7981-r128-mtkuboot=y
+CONFIG_TARGET_DEVICE_PACKAGES_mediatek_filogic_DEVICE_zhao_7981-r128-mtkuboot=""
 ## CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_mediatek_mt7981-rfb is not set
 ## CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_mediatek_mt7986a-rfb-nand is not set
 ## CONFIG_TARGET_DEVICE_mediatek_filogic_DEVICE_mediatek_mt7988a-rfb is not set
