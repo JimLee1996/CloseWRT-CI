@@ -71,3 +71,17 @@ if [ -d "$FRPC_DIR" ]; then
 
 	cd $PKG_PATH && echo "luci-app-frpc has been fixed!"
 fi
+
+#修改sing-box(full变体)的GO_PKG_TAGS，避免完整编译生成过大二进制
+SB_FILE=$(find ../feeds/packages/ -maxdepth 3 -type f -wholename "*/sing-box/Makefile")
+if [ -f "$SB_FILE" ]; then
+	echo " "
+
+	# 标签集可通过环境变量 SING_BOX_TAGS 覆盖
+	SING_BOX_TAGS=${SING_BOX_TAGS:-with_clash_api,with_gvisor,with_quic,with_utls,with_wireguard}
+
+	# 只替换"非 $(subst"的硬编码 GO_PKG_TAGS 行(full变体)，tiny 变体的动态拼装行原样保留
+	sed -i "/GO_PKG_TAGS:=\$(subst/! s|^[[:space:]]*GO_PKG_TAGS:=.*|  GO_PKG_TAGS:=$SING_BOX_TAGS|" $SB_FILE
+
+	cd $PKG_PATH && echo "sing-box has been fixed!"
+fi
